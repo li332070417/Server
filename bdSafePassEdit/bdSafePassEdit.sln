@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bdSafePassEdit", "bdSafePassEdit\bdSafePassEdit.vcproj", "{174F404F-1452-454E-AE10-5685E8A1B9B0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tester", "Tester\Tester.vcproj", "{14A6F559-69A1-490D-B78C-F7E5FC4C4D48}"
+	ProjectSection(ProjectDependencies) = postProject
+		{174F404F-1452-454E-AE10-5685E8A1B9B0} = {174F404F-1452-454E-AE10-5685E8A1B9B0}
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{174F404F-1452-454E-AE10-5685E8A1B9B0} = {174F404F-1452-454E-AE10-5685E8A1B9B0}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		RemoteDebug = RemoteDebug
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{174F404F-1452-454E-AE10-5685E8A1B9B0}.Debug.ActiveCfg = Debug|Win32
+		{174F404F-1452-454E-AE10-5685E8A1B9B0}.Debug.Build.0 = Debug|Win32
+		{174F404F-1452-454E-AE10-5685E8A1B9B0}.Release.ActiveCfg = Release|Win32
+		{174F404F-1452-454E-AE10-5685E8A1B9B0}.Release.Build.0 = Release|Win32
+		{174F404F-1452-454E-AE10-5685E8A1B9B0}.RemoteDebug.ActiveCfg = Debug|Win32
+		{174F404F-1452-454E-AE10-5685E8A1B9B0}.RemoteDebug.Build.0 = Debug|Win32
+		{14A6F559-69A1-490D-B78C-F7E5FC4C4D48}.Debug.ActiveCfg = Debug|Win32
+		{14A6F559-69A1-490D-B78C-F7E5FC4C4D48}.Debug.Build.0 = Debug|Win32
+		{14A6F559-69A1-490D-B78C-F7E5FC4C4D48}.Release.ActiveCfg = Release|Win32
+		{14A6F559-69A1-490D-B78C-F7E5FC4C4D48}.Release.Build.0 = Release|Win32
+		{14A6F559-69A1-490D-B78C-F7E5FC4C4D48}.RemoteDebug.ActiveCfg = RemoteDebug|Win32
+		{14A6F559-69A1-490D-B78C-F7E5FC4C4D48}.RemoteDebug.Build.0 = RemoteDebug|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
