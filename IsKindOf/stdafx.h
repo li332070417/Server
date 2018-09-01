@@ -9,6 +9,6 @@
 #include <iostream>
 #include <tchar.h>
 #include <stdint.h>
-#include <winnt.h>
+//#include <winnt.h>
 
 // TODO: reference additional headers your program requires here
