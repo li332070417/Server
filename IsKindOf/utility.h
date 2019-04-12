@@ -9,9 +9,9 @@ namespace Utility
 	protected:
 		noncopyable(){}
 		virtual ~noncopyable(){}
-	private:
-		noncopyable& operator=(const noncopyable&);
-		noncopyable(const noncopyable&);
+		public:
+		noncopyable& operator=(const noncopyable&) = delete;
+		noncopyable(const noncopyable&) = delete;
 	};
 
 #define SINGLETON_DEF(class_name) \
@@ -27,17 +27,44 @@ public:\
 	class mempoolobj
 	{
 	public:
-		static void* operator new(size_t iSize)
+		void* operator new(size_t iSize)
 		{
 			return malloc(iSize);
 		}
-		static void operator delete(void *p)
+// 		static void* operator new(size_t iSize, int iCount)
+// 		{
+// 			return malloc(iSize * iCount);
+// 		}
+		static void* operator new(size_t iSize, void* p)
+		{
+			return p;
+		}
+		static void* operator new(size_t iSize, int i)
+		{
+			return malloc(iSize);
+		}
+		void* operator new[](size_t iSize)
+		{
+			return malloc(iSize);
+		}
+
+		void operator delete(void *p)
 		{
 			SAFE_DELETE(p)
 		}
-		static void* operator new(size_t iSize, int iCount)
+		static void operator delete(void* p, void*)
 		{
-			return malloc(iSize * iCount);
+			SAFE_DELETE(p);
+		}
+		static void operator delete[](void* p, size_t iSize)
+		{
+			free(p);
+			return;
+		}
+		static void operator delete[](void *p)
+		{
+			free(p);
+			return;
 		}
 	};
 }
